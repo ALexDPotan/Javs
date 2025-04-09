@@ -10,17 +10,18 @@ body {
     overflow: hidden; /* Hide overflow from sliding images */
     display: flex;
     z-index: 2;
-   
     align-items: center;
     justify-content: center;
     text-align: center; 
 }
 
+
+
 .hero-slider {
     position: absolute;
     top:0;
     width: 100%;
-    height: 120%;
+    height: 90%;
     display: flex;
     /* border: 10px solid blue; */
     
@@ -28,10 +29,22 @@ body {
 
 .backImage{
     position: absolute;
-    width: 50%;
-    height: 110%;
+    display: flex;
+    width: 65.99999%;
+    height: 90%;
     right: 0px;
+    top: 0;
+    flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: end;
+   
 }
+
+  .bi{
+    width:50%;
+    height:100;
+    
+}  
 
 
 
@@ -43,8 +56,10 @@ body {
 /* Apply different styles for larger screens */
 @media screen and (min-width: 1024px) { 
     .slide {
-        min-width: 50%; /* Half width for laptops and bigger screens */
+        min-width: 34%; /* Half width for laptops and bigger screens */
     }
+    
+   
 }
 
 
@@ -80,18 +95,32 @@ body {
    
 }
 
+
+.play{
+    position: relative;
+    filter: invert(1);
+    transition: transform 0.3s;
+    
+}
+
 .cta-button {
     padding: 15px 30px;
     font-size: 1.2rem;
     background: #ba28c2;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     cursor: pointer;
+    z-index: 44;
     transition: transform 0.2s;
+    
 }
 .cta-button:hover {
     transform: scale(1.3);
+}
+
+.play:hover {
+    transform: scale(1.38);
 }
 
 /* Responsive Adjustments */
@@ -105,6 +134,12 @@ body {
     .cta-button {
         padding: 10px 20px;
         font-size: 1rem;
+    }
+    #splash-screen h1 {
+        font-size: 2px; /* Reduced font size for mobile */
+    }
+    .hero{
+        height: 70vh;
     }
 }
 
@@ -143,23 +178,26 @@ body {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.genre-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+.genre-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   row-gap: 15px;
 }
 .genre-tile {
     padding: 20px;
-    background: #ff4500;
+    background: #1d1c1b;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
+    transition: 0.3s;
     
    
 }
 .genre-tile:hover {
     background: #e03d00;
+    transform: scale(1.3);
 }
 
 .space{
@@ -183,7 +221,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff; /* Or any color */
+    background: #161821; /* Or any color */
     display: flex;
     flex-direction: column;
     justify-content: center;
